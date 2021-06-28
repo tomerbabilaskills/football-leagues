@@ -1,26 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 import '../styles/Navbar.scss';
 
-function Navbar() {
-  const [leagues, setLeagues] = useState([]);
-
-  useEffect(() => {
-    (async () => {
-      const config = {
-        method: 'get',
-        url: 'https://v3.football.api-sports.io/leagues',
-        headers: {
-          'x-rapidapi-key': '82dba22a90c05b3b1e541463e9376eb9',
-          'x-rapidapi-host': 'v3.football.api-sports.io',
-        },
-      };
-
-      const { data } = await axios(config);
-      setLeagues(data.response.slice(0, 5));
-    })();
-  }, []);
-
+function Navbar(leagues) {
   return (
     <div className="navbar">
       {leagues &&
