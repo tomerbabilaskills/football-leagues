@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/Navbar.scss';
 
 function Navbar({ leagues, setId }) {
   return (

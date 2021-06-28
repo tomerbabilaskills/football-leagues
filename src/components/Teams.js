@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/Teams.scss';
 
 function Teams({ teams }) {
   return (

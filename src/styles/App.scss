@@ -1,3 +1,41 @@
+@use 'base';
+
+%place {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin padding($new-padding: 30px) {
+  display: flex;
+  flex-direction: column;
+  max-width: 100px;
+  padding: $new-padding;
+}
+
 .App {
   text-align: center;
+
+  .navbar {
+    @extend %place;
+    .league {
+      @include padding;
+      img {
+        width: base.$league-img-size;
+        height: base.$league-img-size;
+      }
+    }
+  }
+
+  .content {
+    @extend %place;
+    flex-wrap: wrap;
+    .team {
+      @include padding($new-padding: 20px);
+      align-items: center;
+      img {
+        width: base.$team-img-size;
+        height: base.$team-img-size;
+      }
+    }
+  }
 }
