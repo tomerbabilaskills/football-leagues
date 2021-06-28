@@ -1,16 +1,18 @@
 @use 'base';
 
-.navbar {
+.content {
   display: flex;
   justify-content: center;
-  .league {
+  flex-wrap: wrap;
+  .team {
     display: flex;
     flex-direction: column;
+    align-items: center;
     max-width: 100px;
     padding: 30px;
     img {
-      width: base.$league-img-size;
-      height: base.$league-img-size;
+      width: base.$team-img-size;
+      height: base.$team-img-size;
     }
   }
 }
