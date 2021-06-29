@@ -8,7 +8,7 @@ function App() {
   const [leagues, setLeagues] = useState([]);
   const [id, setId] = useState(0);
   const [teams, setTeams] = useState([]);
-
+ 
   useEffect(() => {
     (async () => {
       const config = {
